@@ -3,7 +3,7 @@
 
 ## Preprocessing
 ```c++
-```math $\theta$ = 0; $\beta$ = 0.2; ```
+\theta = 0; \beta = 0.2;
 
 // contracting degree-1 nodes
 vector<Neighbor> closest;
