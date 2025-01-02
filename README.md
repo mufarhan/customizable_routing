@@ -1,6 +1,7 @@
 
 
 
+## Preprocessing
 ```c++
   $\theta$ = 0; $\beta$ = 0.2;
 
