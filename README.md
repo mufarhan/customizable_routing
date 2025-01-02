@@ -3,6 +3,16 @@
 
 ## Preprocessing
 ```c++
+// reading the graph weights
+
+graph_file = ../Sample Input/g.txt
+
+Graph g;
+ifstream ifs(graph_file);
+read_graph(g, ifs);
+ifs.close();
+
+// setting parameters 
 theta = 0; beta = 0.2;
 
 // contracting degree-1 nodes
