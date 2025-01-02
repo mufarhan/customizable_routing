@@ -23,7 +23,7 @@ g.contract(closest, true);
 vector<CutIndex> ci;
 g.create_cut_index(ci, beta, theta);
 
-// reset if degree-1 nodes are contracted
+// resetting if degree-1 nodes are contracted
 g.reset();
 
 // initializing shortcut graph and tree labeling
@@ -43,7 +43,7 @@ g.customise_shortcut_graph(ch, con_index, edges);
 //customising tree labeling
 g.customise_tree_labeling(ch, con_index);
 
-// reset before second iteration
+// resetting before customising next metric
 g.reset(ch, con_index);
 ```
 
