@@ -42,6 +42,9 @@ g.get_edges(edges);
 g.customise_shortcut_graph(ch, con_index, edges);
 //customising tree labeling
 g.customise_tree_labeling(ch, con_index);
+
+// reset before second iteration
+g.reset(ch, con_index);
 ```
 
 ## Query
