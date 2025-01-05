@@ -7,7 +7,7 @@
 #include <barrier>
 #include <cassert>
 
-#include "road_network_path.h"
+#include "road_network.h"
 
 namespace util {
 
