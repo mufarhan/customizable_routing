@@ -2633,24 +2633,6 @@ vector<NodeID> Graph::query(ContractionHierarchy &ch, NodeID v, NodeID w)
     source.push_back(hub);
     path_from_anc(ch, w, hub, w_anc, source);
 
-    /*cout << "Final Path " << endl;
-    for(NodeID node: source) cout << node << " ";
-    cout << endl;*/
-
-    size_t i = 0;
-    NodeID s = source[i], t; distance_t weight = 0;
-    for (i = 1; i < source.size(); i++) {
-        t = source[i];
-        for(Neighbor n: node_data[s].neighbors) {
-            if(n.node == t) {
-                weight += n.distance; break;
-            }
-        }
-        s = t;
-    }
-
-    if(get_distance(v, w, true) != weight)
-        cout << "***Length: " << weight << endl;
     return source;
 }
 
@@ -2823,7 +2805,7 @@ vector<NodeID> Graph::query(ContractionHierarchy &ch, ContractionIndex &tcl, Nod
 	path_from_anc(ch, tcl, w, lca, w_label, target);
     }
 
-    // combing paths s-lca-t
+    // combining paths s-lca-t
     for(auto it = target.rbegin() + 1; it != target.rend(); it++) source.push_back(*it);
     return source;
 }
