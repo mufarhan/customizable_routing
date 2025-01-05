@@ -2014,68 +2014,6 @@ ContractionHierarchy::ContractionHierarchy() {
 
 }
 
-/*ContractionHierarchy::ContractionHierarchy(istream &is) {
-
-    size_t count, node_count, i, j;
-    is.read((char*)&node_count, sizeof(size_t));
-    nodes.resize(node_count);
-    for(i = 1; i < node_count; i++) {
-	is.read((char*)&nodes[i].dist_index, sizeof(uint16_t));
-
-        is.read((char*)&count, sizeof(size_t));
-        nodes[i].up_neighbors.reserve(count);
-        for(j = 0; j < count; j++) {
-            Neighbor node(NO_NODE, 0);
-            is.read((char*)&node.node, sizeof(NodeID));
-            is.read((char*)&node.distance, sizeof(distance_t));
-            nodes[i].up_neighbors.push_back(node);
-        }
-
-        is.read((char*)&count, sizeof(size_t));
-        nodes[i].down_neighbors.reserve(count);
-        for(j = 0; j < count; j++) {
-            NodeID node;
-            is.read((char*)&node, sizeof(NodeID));
-            nodes[i].down_neighbors.push_back(node);
-        }
-    }
-
-    is.read((char*)&count, sizeof(size_t));
-    bottom_up_nodes.reserve(count);
-    for(i = 0; i < count; i++) {
-	NodeID node;
-	is.read((char*)&node, sizeof(NodeID));
-	bottom_up_nodes.push_back(node);
-    }
-}
-
-void ContractionHierarchy::write(ostream &os) {
-
-    size_t count = nodes.size(), i;
-    os.write((char*)&count, sizeof(size_t));
-    for(i = 1; i < nodes.size() ; i++) {
-	os.write((char*)&nodes[i].dist_index, sizeof(uint16_t));
-
-        count = nodes[i].up_neighbors.size();
-        os.write((char*)&count, sizeof(size_t));
-        for(Neighbor n: nodes[i].up_neighbors) {
-            os.write((char*)&n.node, sizeof(NodeID));
-            os.write((char*)&n.distance, sizeof(distance_t));
-        }
-
-        count = nodes[i].down_neighbors.size();
-        os.write((char*)&count, sizeof(size_t));
-        for(NodeID n: nodes[i].down_neighbors)
-            os.write((char*)&n, sizeof(NodeID));
-    }
-
-    // storing ordering information
-    count = bottom_up_nodes.size();
-    os.write((char*)&count, sizeof(size_t));
-    for(NodeID node: bottom_up_nodes)
-	os.write((char*)&node, sizeof(NodeID));
-}*/
-
 size_t ContractionHierarchy::size() const
 {
     size_t total = 0;
