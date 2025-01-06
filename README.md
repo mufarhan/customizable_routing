@@ -3,8 +3,7 @@
 
 ## Preprocessing
 ```c++
-// reading the graph weights
-
+// reading the graph
 graph_file = ../Sample Input/g.txt
 
 Graph g;
