@@ -2465,7 +2465,7 @@ void Graph::path_from_anc(ContractionHierarchy &ch, ContractionIndex &tcl, NodeI
     NodeID current = prev; size_t i = result.size();
     while (current != v) 
     {
-        NodeID prev = anc_dist[ch.nodes[current].dist_index].pre_anc_node;
+        prev = anc_dist[ch.nodes[current].dist_index].pre_anc_node;
         // unpack path segment from current to prev
         unpack_valley_path(ch, prev, current, result); 
         current = prev;
