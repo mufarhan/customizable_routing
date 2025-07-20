@@ -12,7 +12,6 @@
     #define MULTI_THREAD_DISTANCES 4 // number of parallel threads for label & shortcut computation
 #endif
 
-//#include <barrier>
 #include <thread>
 #include <cstdint>
 #include <climits>
