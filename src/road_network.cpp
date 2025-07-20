@@ -2034,6 +2034,7 @@ int Graph::UpNeighbor_position(ContractionHierarchy &ch, NodeID v, NodeID w) {
        if(ch.nodes[v].up_neighbors[i].neighbor == w) 
 	   return i;
    }
+   assert(false);
 }
 
 void Graph::initialize(ContractionHierarchy &ch, std::vector<CutIndex> &ci, vector<Neighbor> &closest)
