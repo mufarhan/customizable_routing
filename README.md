@@ -50,3 +50,8 @@ g.reset(ch, con_index);
 ```c++
 vector<NodeID> path = g.query(ch, con_index, s, t);
 ```
+
+## References
+
+* Muhammad Farhan, Henning Koehler, Qing Wang, Jiawen Wang, Moritz Laupichler, Peter Sanders, **[Customization Meets 2-Hop Labeling: Efficient Routing in Road Networks.]()**. PVLDB 2025.
+
