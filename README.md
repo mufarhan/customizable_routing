@@ -1,6 +1,3 @@
-
-
-
 ## Preprocessing
 ```c++
 // reading the graph
